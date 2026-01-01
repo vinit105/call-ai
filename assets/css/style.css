@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #3d5058, #203a43, #3f2c64);
+  color: #ffffff;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  backdrop-filter: blur(12px);
+  background: rgba(97, 217, 226, 0.558);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #ddd;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #fff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(16px);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #eaeaea;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.7;
+}
+
+/* Animation */
+.fade-in {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Terms page specific styles */
+.lead {
+  color: #d6e6ea;
+  margin-bottom: 18px;
+}
+
+h2 {
+  margin-top: 22px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+h3 {
+  margin-top: 14px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #f1f7f8;
+}
+
+ul {
+  margin-left: 18px;
+  margin-bottom: 12px;
+}
+
+.small {
+  font-size: 13px;
+  color: #cbdfe4;
+  margin-top: 20px;
+}
+
+a { color: #bfe7ff; text-decoration: underline; }
+
+/* Responsive adjustments */
+@media (max-width: 720px) {
+  .nav { padding: 14px 18px; }
+  .nav-links a { margin-left: 12px; }
+  .container {
+    margin: 20px 16px;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  h1 { font-size: 24px; }
+  h2 { font-size: 18px; }
+  p, li { font-size: 15px; }
+}
+
+@media (max-width: 400px) {
+  .logo { font-size: 18px; }
+  .nav-links { display: none; }
+  .container { padding: 16px; }
+}
+.download-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 14px 28px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
